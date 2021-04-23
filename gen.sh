@@ -8,6 +8,9 @@ cd /public/data1/users/zhaiwei16/GitCode/DepthGen
 for filename in $files
 do	
 	echo $filename
+	arr=(${filename//./ })
+	year=${arr[0]}
+	echo $year
 done 
 
 input="/public/data1/users/zhaiwei16/GitCode/Toy_FG/dataset/FGDataset"$level"/TestDataset/"
