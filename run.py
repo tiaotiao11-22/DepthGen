@@ -71,6 +71,7 @@ def run(input_path, output_path, model_path, model_type="large", optimize=True):
     # get input
     img_names = glob.glob(os.path.join(input_path, "*"))
     num_images = len(img_names)
+    print(num_images)
 
     # create output folder
     os.makedirs(output_path, exist_ok=True)
