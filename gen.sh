@@ -1,4 +1,4 @@
 
-files=$(find . -print)
+files=$(find ./*/* -print)
 
 echo $files
