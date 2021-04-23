@@ -5,16 +5,20 @@ files=$(find ./*/* -print)
 
 cd /public/data1/users/zhaiwei16/GitCode/DepthGen
 
+root_img='/public/data1/users/zhaiwei16/GitCode/DepthGen/images_ori'
+root_depth='/public/data1/users/zhaiwei16/GitCode/DepthGen/depth'
+
 for filename in $files
 do	
-	echo $filename
 	arr=(${filename//./ })
-	year=${arr[0]}
-	echo $year
+	name=${arr[0]}
+	echo $name
+
+	curr_img=$root_img$name
+	curr_depth=$root_depth$name
+
+	echo $curr_img
+	echo $curr_depth
 done 
-
-input="/public/data1/users/zhaiwei16/GitCode/Toy_FG/dataset/FGDataset"$level"/TestDataset/"
-
-output="/public/data1/users/zhaiwei16/GitCode/Toy_FG/dataset/FGDataset"$level"/TestDataset/"
 
 #srun -A test -J Dep -N 1 --ntasks-per-node=1 --cpus-per-task=8 --gres=gpu:1 -p gpu -t 0-01:00:00 python run.py -i /public/data1/users/zhaiwei16/GitCode/DepthGen/images_ori/beat/drum -o /public/data1/users/zhaiwei16/GitCode/DepthGen/depth/beat/drum
