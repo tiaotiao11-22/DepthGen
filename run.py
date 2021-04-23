@@ -69,6 +69,7 @@ def run(input_path, output_path, model_path, model_type="large", optimize=True):
     model.to(device)
 
     # get input
+    print(os.path.join(input_path, "*"))
     img_names = glob.glob(os.path.join(input_path, "*"))
     num_images = len(img_names)
     print(num_images)
