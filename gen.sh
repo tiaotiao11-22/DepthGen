@@ -1,7 +1,7 @@
 
 cd /public/data1/users/zhaiwei16/GitCode/DepthGen/depth
 
-files=$(find ./*/* -print)
+files=$(find ./* -print)
 
 cd /public/data1/users/zhaiwei16/GitCode/DepthGen
 
