@@ -1,5 +1,5 @@
 
-cd /public/data1/users/zhaiwei16/GitCode/DepthGen/depth
+cd /public/data1/users/zhaiwei16/GitCode/DepthGen/ref_depth
 
 files=$(find ./* -print)
 
